@@ -27,16 +27,20 @@ double Rectangle::area() const {
 double Rectangle::perimeter() const {
     return 2 * (length + width);
 }
-bool Rectangle::operator==(Rectangle& other) const{
+bool Rectangle::operator==(const Rectangle& other) const{
     return length == other.length && width == other.width;
 }
-bool Rectangle::operator!=(Rectangle& other) const{
+bool Rectangle::operator!=(const Rectangle& other) const{
     return !(*this == other); 
 }
-Rectangle Rectangle::operator+(Rectangle& other) const {
+Rectangle Rectangle::operator+(const Rectangle& other) const {
     return Rectangle(length + other.length, width + other.width);
 }
 void Rectangle::operator=(const Rectangle& other) {
     length = other.length;
     width = other.width;
+}
+bool Rectangle::operator<(const Rectangle& other) const {
+    return this->area() < other.area();
+    
 }

@@ -5,8 +5,8 @@ using namespace std;
 
 
 int main() {
-    Rectangle rect1(10, 30);
-    Rectangle rect2(40, 100);
+    Rectangle rect1(100, 30);
+    Rectangle rect2(4, 100);
     Rectangle rect3(10, 30);
     Rectangle resultRect;
 
@@ -19,6 +19,8 @@ int main() {
         << resultRect.getLength() <<" * "
         << resultRect.getWidth() << " = "
         << resultRect.area() << endl;
+    
+    cout << "area rect1 < area rect2 ? " << boolalpha << (rect1 < rect2) << endl;
 
     return 0;
 }

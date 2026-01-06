@@ -18,10 +18,11 @@ class Rectangle{
         double perimeter() const;
         
         // Ovreload function
-        bool operator==(Rectangle& other) const;
-        bool operator!=(Rectangle& other) const;
-        Rectangle operator+(Rectangle& other) const;
+        bool operator==(const Rectangle& other) const;
+        bool operator!=(const Rectangle& other) const;
+        Rectangle operator+(const Rectangle& other) const;
         void operator=(const Rectangle& other);
+        bool operator<(const Rectangle& other) const;
 };
 
 
